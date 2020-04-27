@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.inventory.ItemStack;
 
 import fr.maxlego08.zspawner.zcore.utils.storage.Saveable;
 
@@ -119,5 +121,20 @@ public interface SpawnerManager extends Saveable{
 	 * @return
 	 */
 	boolean isBlacklist(Block block);
+	
+	/**
+	 * 
+	 * @return nsm
+	 */
+	NMS getNMS();
+	
+	/**
+	 * 
+	 * @param event
+	 * @param player
+	 * @param itemInHand
+	 * @param block
+	 */
+	void placeSpawner(BlockPlaceEvent event, Player player, ItemStack itemInHand, Block block);
 	
 }
