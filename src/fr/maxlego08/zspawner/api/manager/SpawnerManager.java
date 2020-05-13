@@ -1,4 +1,4 @@
-package fr.maxlego08.zspawner.api;
+package fr.maxlego08.zspawner.api.manager;
 
 import java.util.UUID;
 
@@ -10,6 +10,11 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 
+import fr.maxlego08.zspawner.api.Board;
+import fr.maxlego08.zspawner.api.NMS;
+import fr.maxlego08.zspawner.api.PlayerSpawner;
+import fr.maxlego08.zspawner.api.Spawner;
+import fr.maxlego08.zspawner.api.utils.FactionListener;
 import fr.maxlego08.zspawner.zcore.utils.storage.Saveable;
 
 public interface SpawnerManager extends Saveable{
@@ -136,5 +141,18 @@ public interface SpawnerManager extends Saveable{
 	 * @param block
 	 */
 	void placeSpawner(BlockPlaceEvent event, Player player, ItemStack itemInHand, Block block);
+
+	/**
+	 * 
+	 * @param sender
+	 * @param player
+	 */
+	void removeSpawnerAll(CommandSender sender, Player player);
+
+	/**
+	 * 
+	 * @param spawner
+	 */
+	void remove(Spawner spawner);
 	
 }

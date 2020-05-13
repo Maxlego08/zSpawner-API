@@ -23,6 +23,18 @@ public interface Spawner {
 
 	/**
 	 * 
+	 * @return
+	 */
+	long placedAt();
+	
+	/**
+	 * 
+	 * @return
+	 */
+	long createAt();
+	
+	/**
+	 * 
 	 * @return location
 	 */
 	Location getLocation();
@@ -82,5 +94,23 @@ public interface Spawner {
 	 * @return
 	 */
 	boolean isOwner(Player player);
+	
+	/**
+	 * 
+	 * @return level as id
+	 */
+	int getLevelId();
+	
+	/**
+	 * 
+	 * @param level
+	 */
+	void setLevel(int level);
+	
+	/**
+	 * 
+	 * @return
+	 */
+	Level getLevel();
 
 }

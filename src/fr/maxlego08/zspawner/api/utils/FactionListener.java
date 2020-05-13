@@ -1,4 +1,4 @@
-package fr.maxlego08.zspawner.api;
+package fr.maxlego08.zspawner.api.utils;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -22,7 +22,7 @@ public abstract class FactionListener {
 	public boolean preBuild(Player player, Location location) {
 
 		boolean worldguardBuild = ZPlugin.z().getWorldguard() != null
-				? ZPlugin.z().getWorldguard().canBuild(player, location) : true;
+				? ZPlugin.z().getGuard().canBuild(player, location) : true;
 
 		return canBuild(player, location) && worldguardBuild;
 	}
