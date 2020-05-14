@@ -2,60 +2,59 @@ package fr.maxlego08.zspawner.api;
 
 import fr.maxlego08.zspawner.zcore.utils.economy.Economy;
 
-public interface Level {
+public interface Level extends SimpleLevel{
+	
+	/**
+	 * 
+	 * @param value
+	 */
+	void setMinDelay(int value);
 
 	/**
 	 * 
-	 * @return level id
+	 * @param value
 	 */
-	int getId();
-	
-	/**
-	 * 
-	 * @return
-	 */
-	double getPrice();
-	
-	/**
-	 * 
-	 * @return
-	 */
-	Economy getEconomy();
-	
-	/**
-	 * 
-	 * @return min delay
-	 */
-	int getMinDelay();
-	
-	/**
-	 * 
-	 * @return max delay
-	 */
-	int getMaxDelay();
+	void setMaxDelay(int value);
 
 	/**
 	 * 
-	 * @return
+	 * @param spawnCount
 	 */
-	int getSpawnCount();
+	void setSpawnCount(int spawnCount);
+
+	/**
+	 * 
+	 * @param maxNearbyEntity
+	 */
+	void setMaxNearbyEntity(int maxNearbyEntity);
 	
 	/**
 	 * 
-	 * @return
+	 * @param spawnRange
 	 */
-	int getMaxNearbyEntities();
+	void setSpawnRange(int spawnRange);
 	
 	/**
 	 * 
-	 * @return
+	 * @param requiredPlayerRange
 	 */
-	int getSpawnRange();
+	void setRequiredPlayerRange(int requiredPlayerRange);
 	
 	/**
 	 * 
-	 * @return
+	 * @param price
 	 */
-	int getRequiredPlayerRange();
+	void setPrice(double price);
+	
+	/**
+	 * 
+	 * @param economy
+	 */
+	void setEconomy(Economy economy);
+
+	/**
+	 * If you make modifications you must call this method to save the modifications made
+	 */
+	void flush();
 	
 }

@@ -29,9 +29,26 @@ public interface NMS extends Key{
 	 * 
 	 * @param itemStack
 	 * @param key
+	 * @param value
+	 * @return
+	 */
+	ItemStack set(ItemStack itemStack, String key, int value);
+	
+	/**
+	 * 
+	 * @param itemStack
+	 * @param key
 	 * @return
 	 */
 	EntityType get(ItemStack itemStack, String key);
+	
+	/**
+	 * 
+	 * @param itemStack
+	 * @param key
+	 * @return
+	 */
+	int getInteger(ItemStack itemStack, String key);
 	
 	/**
 	 * 
@@ -46,7 +63,7 @@ public interface NMS extends Key{
 	 * @param spawner
 	 * @return
 	 */
-	ItemStack fromSpawner(Spawner spawner);
+	ItemStack fromSpawner(FakeSpawner spawner);
 	
 	/**
 	 * 
@@ -54,5 +71,11 @@ public interface NMS extends Key{
 	 * @return
 	 */
 	Spawner toSpawner(ItemStack itemStack);
+
+	/**
+	 * 
+	 * @param spawnerObject
+	 */
+	void updateSpawner(Spawner spawner);
 
 }
