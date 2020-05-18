@@ -2,7 +2,7 @@
 
 # zHopper
 
-Price: 10.94€<br>
+Price: 8€<br>
 Spigot: https://www.spigotmc.org/resources/69465/ <br>
 Mc-Market: https://www.mc-market.org/resources/8775/ <br>
 Songoda: https://songoda.com/marketplace/product/361 <br>
