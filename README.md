@@ -1,6 +1,6 @@
 <p align="center"><img src="http://img.groupez.xyz/zspawner/logo.png" width="150" alt="zSpawner"></p>
 
-# zHopper
+# zSpawner
 
 Price: 8€<br>
 Spigot: https://www.spigotmc.org/resources/69465/ <br>
